@@ -36,7 +36,7 @@ pub fn draw_mesh(mesh: &Mesh) {
     context.gl.geometry(&mesh.vertices[..], &mesh.indices[..]);
 }
 
-fn draw_quad(vertices: [(Vec3, Vec2, Color); 4]) {
+pub fn draw_quad(vertices: [(Vec3, Vec2, Color); 4]) {
     let context = get_context();
     let indices = [0, 1, 2, 0, 2, 3];
     let quad = [
